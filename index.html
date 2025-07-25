@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Yadav - Senior NodeJS Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">PY</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text">Hi, I'm Praveen Yadav</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Senior NodeJS Backend Developer</h2>
+                    <p class="hero-description">
+                        Crafting scalable backend solutions with 4+ years of expertise in Node.js, 
+                        TypeScript, and cloud-native architectures. Passionate about building 
+                        performant APIs and microservices.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                        <a href="#" class="btn btn-secondary" id="downloadResume">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <img src="public/images/profile.png" alt="Praveen Yadav" class="profile-avatar" onerror="this.onerror=null; this.src='public/images/profile.jpg'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='flex';};">
+                        <div class="profile-avatar-fallback" style="display: none; font-size: 8rem; color: var(--primary-color); animation: float 3s ease-in-out infinite; width: 250px; height: 250px; border-radius: 50%; border: 4px solid var(--primary-color); align-items: center; justify-content: center;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="floating-icons">
+                            <div class="icon-item" style="--delay: 0s">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 0.5s">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 1s">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="icon-item" style="--delay: 1.5s">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Senior Backend Developer with 4+ years of experience specializing in Node.js, 
+                        TypeScript, and microservices architecture. I have a proven track record of 
+                        building scalable APIs, cloud-native applications, and robust backend systems 
+                        using AWS services.
+                    </p>
+                    <p class="about-description">
+                        My expertise spans across various technologies including PostgreSQL, Redis, 
+                        Kafka, and modern testing frameworks. I'm passionate about writing clean, 
+                        maintainable code and mentoring junior developers to help them grow in their careers.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3 class="stat-number">4+</h3>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">10+</h3>
+                            <p class="stat-label">Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="experience-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Specializing in scalable server-side solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">NestJS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">SvelteKit</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">NoSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS Lambda</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">API Gateway</span>
+                        <span class="skill-tag">Cognito</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-vial"></i>
+                        <h3>Testing</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">Vitest</span>
+                        <span class="skill-tag">Unit Testing</span>
+                        <span class="skill-tag">Integration Testing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Architecture & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven Systems</span>
+                        <span class="skill-tag">Serverless</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="job-title">Senior NodeJS Backend Developer</h3>
+                            <span class="job-period">Feb 2021 - Present</span>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Designed and implemented scalable APIs using Node.js, Express, and NestJS</li>
+                                <li>Built serverless applications using AWS Lambda and cloud services</li>
+                                <li>Integrated PostgreSQL, Redis, and Kafka for high-performance systems</li>
+                                <li>Mentored junior developers and led architectural decisions</li>
+                                <li>Optimized system performance achieving sub-200ms response times</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3 class="project-title">
+                                <a href="https://shopper.yougov.com/" target="_blank" class="project-link">GfK Consumer Portals</a>
+                            </h3>
+                            <span class="project-period">Nov 2024 – Present</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>RESTful APIs with Node.js, TypeScript, and AWS Lambda. Built modular, 
+                        maintainable services with comprehensive Vitest testing coverage.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">Vitest</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3 class="project-title">
+                                <a href="https://dashboard.hydro.online/" target="_blank" class="project-link">Hydro</a>
+                            </h3>
+                            <span class="project-period">Dec 2023 – Nov 2024</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Developed a comprehensive platform for publishers to register and receive Hydro rewards based on website visits. This innovative solution reduces dependency on traditional advertisements by enabling publishers to monetize "time spent" by visitors.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3 class="project-title">EQ8 - Blockchain Survey Platform</h3>
+                            <span class="project-period">2022 – 2023</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>EQ8 is a cutting-edge mobile application that can be downloaded from the Playstore or iTunes. As a survey-based platform, registered users can participate in various surveys, contests, and quizzes to earn rewards in the form of platform tokens, USDT, or EXP. Every question, survey, and contest is created as a unique NFT and stored on the blockchain.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Web3.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Let's discuss how we can work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+917888859348">+91-7888859348</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:praveen098.py@gmail.com">praveen098.py@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/praveen-yadav" target="_blank">linkedin.com/in/praveen-yadav</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Praveen Yadav. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/praveen-yadav" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:praveen098.py@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+917888859348" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
