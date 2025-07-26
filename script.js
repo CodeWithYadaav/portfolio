@@ -752,4 +752,52 @@ function throttle(func, delay) {
 // Apply throttling to scroll events
 window.addEventListener('scroll', throttle(function () {
     // Any additional scroll handling can go here
-}, 16)); // ~60fps 
+}, 16)); // ~60fps
+
+// Demo Modal Functionality
+function showDemo(projectType) {
+    const modal = document.getElementById('demoModal');
+    const icoDemo = document.getElementById('icoDemo');
+
+    // Hide all demo content first
+    icoDemo.style.display = 'none';
+
+    // Show the requested demo content
+    if (projectType === 'ico') {
+        icoDemo.style.display = 'block';
+    }
+
+    // Show the modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Close modal functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('demoModal');
+    const closeBtn = document.querySelector('.close');
+
+    // Close modal when clicking the X button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+    }
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    });
+}); 
