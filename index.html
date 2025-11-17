@@ -6,7 +6,7 @@
     <title>Praveen Yadav - Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23007acc'/%3E%3Ctext x='50' y='65' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='white' text-anchor='middle'%3EPY%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -31,6 +31,12 @@
                 </li>
                 <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" onclick="openModal('hobbiesModal'); return false;">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" onclick="openModal('leetcodeModal'); return false;">LeetCode</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
@@ -432,6 +438,7 @@
         </div>
     </section>
 
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -515,6 +522,221 @@
             </div>
         </div>
     </footer>
+
+    <!-- Hobbies Modal -->
+    <div id="hobbiesModal" class="section-modal">
+        <div class="modal-content large-modal">
+            <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
+            <div class="modal-header">
+                <h2 class="section-title">Beyond Code</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Life is more than just programming</p>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <div class="hobby-placeholder">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <!-- Add your hobby image here: <img src="public/images/hobby1.jpg" alt="Photography"> -->
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Photography</h3>
+                        <p>Capturing moments through the lens, exploring perspectives and telling stories visually.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <div class="hobby-placeholder">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <!-- Add your hobby image here: <img src="public/images/hobby2.jpg" alt="Travel"> -->
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Travel & Adventure</h3>
+                        <p>Exploring new places, cultures, and experiences that broaden horizons and inspire creativity.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <div class="hobby-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <!-- Add your hobby image here: <img src="public/images/hobby3.jpg" alt="Reading"> -->
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Reading</h3>
+                        <p>Diving into tech books, biographies, and fiction to continuously learn and grow.</p>
+                    </div>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <div class="hobby-placeholder">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <!-- Add your hobby image here: <img src="public/images/hobby4.jpg" alt="Fitness"> -->
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Fitness</h3>
+                        <p>Maintaining physical and mental wellness through regular workouts and healthy lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LeetCode Modal -->
+    <div id="leetcodeModal" class="section-modal">
+        <div class="modal-content large-modal">
+            <span class="close" onclick="closeModal('leetcodeModal')">&times;</span>
+            <div class="modal-header">
+                <h2 class="section-title">Problem Solving</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Showcasing algorithmic thinking and coding expertise</p>
+            </div>
+            <div class="leetcode-grid">
+                <div class="leetcode-card">
+                    <div class="leetcode-header">
+                        <div class="leetcode-badge">
+                            <i class="fas fa-fire"></i>
+                            <span>Hot</span>
+                        </div>
+                        <div class="leetcode-difficulty easy">Easy</div>
+                    </div>
+                    <h3 class="leetcode-title">Two Sum</h3>
+                    <p class="leetcode-description">Find two numbers that add up to target</p>
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span class="code-lang">JavaScript</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code>function twoSum(nums, target) {
+    const map = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (map.has(complement)) {
+            return [map.get(complement), i];
+        }
+        map.set(nums[i], i);
+    }
+    return [];
+}</code></pre>
+                    </div>
+                    <div class="leetcode-stats">
+                        <span><i class="fas fa-clock"></i> O(n)</span>
+                        <span><i class="fas fa-layer-group"></i> O(n)</span>
+                    </div>
+                </div>
+
+                <div class="leetcode-card">
+                    <div class="leetcode-header">
+                        <div class="leetcode-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Popular</span>
+                        </div>
+                        <div class="leetcode-difficulty medium">Medium</div>
+                    </div>
+                    <h3 class="leetcode-title">Longest Palindromic Substring</h3>
+                    <p class="leetcode-description">Find the longest palindromic substring</p>
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span class="code-lang">JavaScript</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code>function longestPalindrome(s) {
+    let start = 0, maxLen = 0;
+    
+    function expandAroundCenter(left, right) {
+        while (left >= 0 && right < s.length 
+               && s[left] === s[right]) {
+            left--; right++;
+        }
+        return right - left - 1;
+    }
+    
+    for (let i = 0; i < s.length; i++) {
+        const len1 = expandAroundCenter(i, i);
+        const len2 = expandAroundCenter(i, i + 1);
+        const len = Math.max(len1, len2);
+        
+        if (len > maxLen) {
+            maxLen = len;
+            start = i - Math.floor((len - 1) / 2);
+        }
+    }
+    
+    return s.substring(start, start + maxLen);
+}</code></pre>
+                    </div>
+                    <div class="leetcode-stats">
+                        <span><i class="fas fa-clock"></i> O(n²)</span>
+                        <span><i class="fas fa-layer-group"></i> O(1)</span>
+                    </div>
+                </div>
+
+                <div class="leetcode-card">
+                    <div class="leetcode-header">
+                        <div class="leetcode-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Classic</span>
+                        </div>
+                        <div class="leetcode-difficulty hard">Hard</div>
+                    </div>
+                    <h3 class="leetcode-title">Merge K Sorted Lists</h3>
+                    <p class="leetcode-description">Merge k sorted linked lists</p>
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span class="code-lang">JavaScript</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code>function mergeKLists(lists) {
+    if (!lists.length) return null;
+    
+    while (lists.length > 1) {
+        const merged = [];
+        for (let i = 0; i < lists.length; i += 2) {
+            const l1 = lists[i];
+            const l2 = lists[i + 1] || null;
+            merged.push(mergeTwoLists(l1, l2));
+        }
+        lists = merged;
+    }
+    
+    return lists[0];
+}
+
+function mergeTwoLists(l1, l2) {
+    const dummy = new ListNode(0);
+    let current = dummy;
+    
+    while (l1 && l2) {
+        if (l1.val < l2.val) {
+            current.next = l1;
+            l1 = l1.next;
+        } else {
+            current.next = l2;
+            l2 = l2.next;
+        }
+        current = current.next;
+    }
+    current.next = l1 || l2;
+    return dummy.next;
+}</code></pre>
+                    </div>
+                    <div class="leetcode-stats">
+                        <span><i class="fas fa-clock"></i> O(n log k)</span>
+                        <span><i class="fas fa-layer-group"></i> O(1)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Demo Modal -->
     <div id="demoModal" class="modal">
