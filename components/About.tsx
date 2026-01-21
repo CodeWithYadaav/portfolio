@@ -60,7 +60,7 @@ export default function About() {
               className="space-y-6"
             >
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I'm a <span className="font-semibold text-primary">Full Stack Engineer</span> with
+                I&apos;m a <span className="font-semibold text-primary">Full Stack Engineer</span> with
                 5+ years of hands-on experience architecting and building enterprise-grade systems
                 that serve millions of users worldwide.
               </p>
